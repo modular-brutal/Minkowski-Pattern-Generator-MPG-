@@ -794,7 +794,7 @@ function DocumentationModal({ isOpen, onClose }) {
       <div className="modal-content">
         <button className="modal-close" onClick={onClose}>×</button>
         <div className="modal-scroll">
-          <h1>Pattern Generator Documentation</h1>
+          <h1>Minkowski Pattern Generator Documentation</h1>
           
           <section>
             <h2>Feature Overview</h2>
@@ -954,13 +954,39 @@ function DocumentationModal({ isOpen, onClose }) {
           </section>
 
           <section>
-            <h2>Performance Tips</h2>
-            <ul>
-              <li>Lower Grid Size for better performance</li>
-              <li>Simple render styles (Pixels, Lines) are faster than complex ones</li>
-              <li>Monitor FPS in the Performance Monitor</li>
-              <li>Close other browser tabs for better recording performance</li>
-            </ul>
+            <h2>Legal Information</h2>
+            <div className="legal-section">
+              <h3>Copyright</h3>
+              <p>© 2024 Luis Rapp. All rights reserved.</p>
+              
+              <h3>License Terms</h3>
+              <p>The Minkowski Pattern Generator (MPG) is licensed under the following terms:</p>
+              <ul>
+                <li>You may use this software for personal and commercial purposes</li>
+                <li>You may modify and distribute the code under the following conditions:
+                  <ul>
+                    <li>Attribution must be given to the original author</li>
+                    <li>Modifications must be clearly marked</li>
+                    <li>The software may not be used for harmful or malicious purposes</li>
+                    <li>The software may not be used to generate content that promotes hate, discrimination, or abuse</li>
+                  </ul>
+                </li>
+                <li>The software is provided "as is", without warranty of any kind</li>
+                <li>The author is not liable for any damages arising from the use of this software</li>
+              </ul>
+
+              <h3>Usage Restrictions</h3>
+              <p>This software may not be used for:</p>
+              <ul>
+                <li>Generation of harmful or malicious content</li>
+                <li>Distribution of modified versions without proper attribution</li>
+                <li>Integration into systems designed to cause harm</li>
+                <li>Any purpose that violates applicable laws or regulations</li>
+              </ul>
+
+              <h3>Contact</h3>
+              <p>For licensing inquiries or permissions beyond the scope of this license, please contact the author.</p>
+            </div>
           </section>
 
           <section>
@@ -1322,7 +1348,7 @@ function App() {
     const url = URL.createObjectURL(blob)
     
     const link = document.createElement('a')
-    link.download = 'pattern-generator-settings.txt'
+    link.download = 'mpg-settings.txt'
     link.href = url
     link.click()
     
@@ -1359,7 +1385,7 @@ function App() {
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = `pattern-${Date.now()}.webm`;
+        link.download = `mpg-${Date.now()}.webm`;
         link.click();
         URL.revokeObjectURL(url);
         chunksRef.current = [];
@@ -1418,7 +1444,7 @@ function App() {
 
       <div className={`floating-control-panel ${controlPanelVisible ? 'visible' : ''}`}>
         <div className="panel-header">
-          <AppTitle text="Pattern Generator" version="1.0" />
+          <AppTitle text="Minkowski Pattern Generator" version="1.0" />
           <button className="close-panel" onClick={() => setControlPanelVisible(false)}>
             ×
           </button>

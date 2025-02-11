@@ -1,107 +1,84 @@
-# React Terminal UI Template
+# Minkowski Pattern Generator (MPG)
 
-A modern, terminal-inspired React template with a sleek control panel layout and dark/light theme support.
+An interactive web application for generating and visualizing mathematical patterns based on Minkowski distance metrics. Create beautiful, dynamic visualizations with customizable parameters and real-time audio reactivity.
 
 ## Features
 
-- 🎨 Dark/Light theme support
-- 📊 Built-in performance monitor
-- 🎯 Responsive layout with control panel
-- 💻 Terminal-inspired design
-- 🔧 Customizable UI components
-- 📱 Mobile-friendly
-- ⚡ Built with Vite
+- Multiple pattern types based on Minkowski metrics
+  - Wave interference patterns
+  - Fractal geometries
+  - Dynamic flow fields
+- Mathematical foundations
+  - Minkowski distance (L<sub>p</sub> metric)
+  - Superellipse geometries
+  - Wave interference equations
+- Visualization options
+  - Adjustable grid size (20×20 to 80×80)
+  - P-value control (2.0 to 6.0)
+  - Multiple render styles (ASCII, Pixels, Matrix)
+- Interactive features
+  - Audio reactivity
+  - Color scheme customization
+  - Auto-cycling colors
+  - Fullscreen mode
+  - Pattern recording
+  - Settings export/import
 
-## Layout Structure
+## Tech Stack
 
-```
-┌─────────────────────────────────────────┐
-│ App                                     │
-├───────────────┬─────────────────────────┤
-│ Control Panel │                         │
-│ ┌───────────┐ │                         │
-│ │  Title    │ │                         │
-│ ├───────────┤ │                         │
-│ │ Controls  │ │      Main Content       │
-│ │           │ │         Area            │
-│ ├───────────┤ │                         │
-│ │Performance│ │                         │
-│ │ Monitor   │ │                         │
-│ └───────────┘ │                         │
-└───────────────┴─────────────────────────┘
-```
+- React
+- Vite
+- Canvas API
+- Web Audio API
 
 ## Getting Started
 
-1. Clone this template:
-   ```bash
-   git clone [your-template-url]
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start development server:
-   ```bash
-   npm run dev
-   ```
-
-## Customization
-
-### Themes
-The template includes a complete theme system with CSS variables. Modify the theme colors in `src/App.css`:
-
-```css
-:root {
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #141414;
-  --accent-color: #00ff00;
-  /* ... other variables */
-}
+1. Clone the repository
+```bash
+git clone [your-repo-url]
 ```
 
-### Components
-- `ThemeToggle`: Dark/Light mode switch
-- `AppTitle`: Customizable title with version
-- `PerformanceMonitor`: Real-time performance stats
-
-### Control Panel
-The control panel is designed to be easily extensible. Add new controls by creating new sections:
-
-```jsx
-<div className="control-section">
-  <label>Your Control</label>
-  {/* Your control content */}
-</div>
+2. Install dependencies
+```bash
+npm install
 ```
 
-## Styling Classes
+3. Run development server
+```bash
+npm run dev
+```
 
-- `.control-panel`: Main sidebar panel
-- `.control-section`: Individual control groups
-- `.button-group`: Horizontal button layouts
-- `.canvas-container`: Main content area
-- `.theme-toggle`: Theme switch button
-- `.app-title`: Application title
+## Usage
 
-## Performance
+### Controls
+- Adjust p-value to change pattern geometry
+- Modify grid size for different resolutions
+- Select different pattern types and render styles
+- Toggle audio reactivity for music visualization
+- Use auto-cycle for dynamic color transitions
 
-The template includes a built-in performance monitor that tracks:
-- FPS (Frames Per Second)
-- Memory Usage
-- Frame Time
+### Keyboard Shortcuts
+- 'F': Toggle fullscreen
+- 'Space': Show/hide controls
+- 'R': Quick randomize
+- 'ESC': Exit fullscreen
 
-## Browser Support
+## Mathematical Background
 
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
+The core of MPG is based on the Minkowski distance metric:
+
+```
+d(x,y) = (|x₁-x₂|ᵖ + |y₁-y₂|ᵖ)^(1/p)
+```
+
+Where:
+- p = 2: Euclidean distance (circles)
+- p = 1: Manhattan distance (diamonds)
+- p > 2: Superellipses
 
 ## License
 
-MIT License - Feel free to use this template for any project.
+MIT
 
 ## Credits
 

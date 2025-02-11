@@ -1310,3 +1310,28 @@ sub {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.legal-section {
+  padding: 20px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.legal-section h3 {
+  color: var(--accent-color);
+  margin: 20px 0 10px 0;
+}
+
+.legal-section ul {
+  padding-left: 20px;
+}
+
+.legal-section ul ul {
+  margin: 10px 0;
+}
+
+.legal-section li {
+  margin: 8px 0;
+  line-height: 1.4;
+}
